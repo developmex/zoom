@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ListView</title>
+</head>
+<body>
+
+<div>
+<ul>
+{% for meeting in object_list %}
+    <li>{{ meeting}}</li>
+    {% empty %}
+    <li>lista vacía </li>
+    {% endfor %}
+</ul></div>
+<div>
+
+    <ul>
+{% for meeting_list in object_list %}
+    <li>{{ rx.meetings}}</li>
+    {% empty %}
+    <li>lista vacía </li>
+    {% endfor %}
+</ul>
+
+</div>
+</body>
+</html>

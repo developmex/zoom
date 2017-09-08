@@ -3,12 +3,20 @@ from __future__ import unicode_literals
 import json
 from django.shortcuts import render
 import os, sys
-
 lib_path = os.path.abspath(os.path.join('..'))
 sys.path.append(lib_path)
+from django.views.generic import TemplateView
 
-from json2html import *
-# views.py
+
+
+class VideoClaseTempateView(TemplateView):
+    template = "index.html"
+
+    def get_context_data(self, *args,**kwargs):
+        context = super(VideoClassTempateView, self).get_context_data(*args, **kwargs)
+        context["titulo"] = "Titulo de Contexto Video Clase"
+        return context
+
 
 
 
@@ -40,9 +48,6 @@ def index(request):
     return render(request, template, context)
 
 
-
-
-
 def contenido(request):
     pass
     template = "contenido.html"
@@ -62,3 +67,4 @@ def contenido(request):
         "tabla2": sub[0]
     }
     return render(request, template, context)
+

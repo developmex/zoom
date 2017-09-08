@@ -25,7 +25,7 @@ SECRET_KEY = '71bw^f=-hdqr+=dc$a2+l9c3gpy$xy7m8ijg#+94b6ua!29jv4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.42.0.138']
+ALLOWED_HOSTS = ['10.42.0.138','0.0.0.0']
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'videos',
+    'videoclase'
+
 ]
 
 MIDDLEWARE = [
